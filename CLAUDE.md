@@ -54,7 +54,7 @@ boundaries are structural:
 
 ## Architecture
 
-12 Pregel cells, each path-reserved at R0 (`40-engine/kotoba/crates/kotoba-kotodama/cells/chigiri_*/`):
+12 Pregel cells, each path-reserved at R0 (`kotoba-lang/kotodama-cells/chigiri_*/`):
 
 ```
 charters_attestation ──────┐
@@ -197,7 +197,7 @@ exist). Lexicon schema validation (R1) will run via lefthook
 R1 smoke test (when cells are created):
 
 ```bash
-cd 40-engine/kotoba/crates/kotoba-kotodama/py
+cd kotoba-lang/kotodama-py
 python -c "from kotodama.cells.chigiri_charters_attestation import _r0_marker" 2>&1 | grep "R0 scaffold"
 # ... similar for all 12 chigiri_* cells
 ```
