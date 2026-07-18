@@ -3,7 +3,7 @@
    :dependency/repository "https://github.com/etzhayyim/root"
    :dependency/revision "ae6832f7ed09147a18b0416de18b44b00c95562a"
    :dependency/paths ["90-docs/adr"
-                      "70-tools/scripts/lint/no-chigiri-legal-advice.mjs"
+                      "70-tools/scripts/lint/no-legal-aid-consideration.mjs"
                       "70-tools/baien-moemoekyun-train/recipes/legal"]}
   {:dependency/id com.etzhayyim/bunken
    :dependency/repository "https://github.com/etzhayyim/root"

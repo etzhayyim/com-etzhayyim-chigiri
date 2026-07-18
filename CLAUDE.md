@@ -20,7 +20,7 @@ boundaries are structural:
    Templates document procedure; advice happens via human counsel
    contracted through Public Fund (Council Lv6+ approval per
    ADR-2605192145). Lint hook
-   `70-tools/scripts/lint/no-chigiri-legal-advice.mjs` (W1) scans
+   root-pinned `70-tools/scripts/lint/no-legal-aid-consideration.mjs` scans
    chigiri code for advice-issuing language; CI-blocks on hit.
 2. **No state-granted legal personality (N2)** — Preamble §0.4 Lv7+
    unanimity lock. chigiri MUST NOT introduce a code path that depends
@@ -135,7 +135,7 @@ forwarding to any arbitration channel.
 1. ADR-2605262700 Council Lv6+ ≥3 ratify;
 2. Bootstrap Council Seat 2-5 RFP closure (2026-06-19) + at least one
    filled Council seat beyond Founder Seat 1;
-3. Lint hook `70-tools/scripts/lint/no-chigiri-legal-advice.mjs`
+3. Lint hook `70-tools/scripts/lint/no-legal-aid-consideration.mjs`
    deployed to lefthook config;
 4. Charter Rider scanner false-positive rate ≤5% over 7-day trial on
    chigiri-bound document samples (R8 / R11 KaizenObserver health);

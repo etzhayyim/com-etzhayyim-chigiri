@@ -260,7 +260,7 @@
    "G17"
    "Certify-before-mediation (ADR-2605302330): the dispute_mediation cell claims §72-exemption only as a 認証紛争解決事業者 (Japan ADR法); pre-certification it degrades to non-binding facilitation",
    "G14"
-   "UPL strictly prohibited; chigiri MUST NOT render legal advice; lint hook 70-tools/scripts/lint/no-chigiri-legal-advice.mjs scans code",
+   "UPL strictly prohibited; chigiri MUST NOT render legal advice; the root-pinned no-legal-aid-consideration lint scans code",
    "G12"
    "Excommunication = Council Lv6+ ≥4/7 + 30-day cure period; schema enforces curePeriodEndsAt > createdAt + 30d"}},
  "tier" "Tier-B",
@@ -269,7 +269,7 @@
   "rule"
   "chigiri MUST NOT render legal advice. Templates document procedure; advice happens via human counsel contracted through Public Fund per ADR-2605192145 (Council Lv6+ approval).",
   "structuralEnforcement"
-  "Lint hook 70-tools/scripts/lint/no-chigiri-legal-advice.mjs (Wave 1) scans chigiri code for advice-issuing language; CI-blocks on hit."},
+  "Root-pinned no-legal-aid-consideration lint scans chigiri code for prohibited consideration/advice drift; CI-blocks on hit."},
  "crossActorData"
  ["did:web:hanrei.etzhayyim.com" "did:web:bunken.etzhayyim.com"],
  "@type" "ActorManifest",
