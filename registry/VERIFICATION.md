@@ -2,7 +2,7 @@
 
 Per ADR-2605262700 §2 + §4 (G14 verified-referral-only routing). Every
 `com.etzhayyim.chigiri.legalAidReferral` record in
-`registry/legal-aid.seed.json` (key `referrals`, id field `referralId`) ships
+canonical `registry/legal-aid.seed.edn` (key `referrals`, id field `referralId`) ships
 `verificationStatus = unverified-seed`, and **no live action — referral
 routing / wayfinding via the `chigiri_legal_aid_clinic` resolver
 (`referral_match.py`) — may run against an unverified-seed or stale entry**.
@@ -10,7 +10,7 @@ This file documents how an entry is moved through the three tiers — the
 human/Council checks that gate live referral routing.
 
 > **R0 status**: this is the *process spec*. **No entry is verified yet**; all
-> entries in `legal-aid.seed.json` remain `unverified-seed`. Verification
+> entries in `legal-aid.seed.edn` remain `unverified-seed`. Verification
 > execution begins at R1 (Council ratification + a referral-verification
 > maintainer DID registered). The `chigiri_legal_aid_clinic` referral resolver
 > is a pure registry query (`referral_match.py`); at R0 it routes only over
@@ -155,7 +155,7 @@ consideration / fee** (the no-legal-aid-consideration invariant). Specifically:
 
 ## Current seed status (2026-06-02)
 
-All entries in `legal-aid.seed.json` are `unverified-seed` (55 entries / 36
+All entries in `legal-aid.seed.edn` are `unverified-seed` (55 entries / 36
 distinct jurisdictions at iter-4). Every entry carries `legalBasis` +
 `provenance` (https) + `lastVerified` + a `notes` boundary caveat, but the
 `authority` / `legalBasis` / `channel` / fee / threshold / URL fields are
@@ -182,9 +182,9 @@ FLIC example-only).
 
 ## Machine-enforced floor
 
-`70-tools/scripts/audit/test_chigiri_registry_seed.py` (the fail-closed
+`test/chigiri/registry_seed_test.clj` (the fail-closed
 registry-invariants test, R0-safe: test-only, network-free, no cell execution)
-pins the constitutional properties of `legal-aid.seed.json` so a later refactor
+pins the constitutional properties of `legal-aid.seed.edn` so a later refactor
 cannot silently weaken them:
 
 1. File parses as JSON and `referrals` is a non-empty list.

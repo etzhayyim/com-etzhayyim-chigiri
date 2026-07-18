@@ -1,4 +1,4 @@
-# 20-actors/chigiri — CLAUDE.md
+# com-etzhayyim-chigiri — CLAUDE.md
 
 ## Identity
 
@@ -54,7 +54,8 @@ boundaries are structural:
 
 ## Architecture
 
-12 Pregel cells, each path-reserved at R0 (`kotoba-lang/kotodama-cells/chigiri_*/`):
+12 Pregel cells are supplied by the pinned flat west sibling
+`orgs/kotoba-lang/kototama` (`KOTOTAMA_REPO` override):
 
 ```
 charters_attestation ──────┐
@@ -197,16 +198,15 @@ exist). Lexicon schema validation (R1) will run via lefthook
 R1 smoke test (when cells are created):
 
 ```bash
-cd kotoba-lang/kotodama-py
+cd "${KOTOTAMA_REPO:-../../kotoba-lang/kototama}/crates/kotoba-kotodama/py"
 python -c "from kotodama.cells.chigiri_charters_attestation import _r0_marker" 2>&1 | grep "R0 scaffold"
 # ... similar for all 12 chigiri_* cells
 ```
 
 ## Related Files
 
-- `/20-actors/chigiri/manifest.jsonld`
-- `/20-actors/chigiri/README.md`
-- `/00-contracts/lexicons/com/etzhayyim/chigiri/` (9 Lexicon JSONs + README)
+- `manifest.edn`, `identity.edn`, and `dependencies.edn`
+- `lex/` canonical EDN contracts; `wire/` external JSON/JSON-LD
 - `/90-docs/adr/2605262700-chigiri-legal-procedure-tier-b-actor-r0.md` — Master ADR
 - `/90-docs/adr/2605262800-public-data-legal-corpus-ipfs-ingestion.md` — Data substrate ADR
 - `/90-docs/adr/2605192100-etzhayyim-mission-charter.md` — Mission charter

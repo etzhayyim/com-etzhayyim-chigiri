@@ -43,7 +43,7 @@ on-chain attestation + routing substrate for:
 ## Replaces
 
 The legacy `lawfirm.etzhayyim.com` reference visible in
-`20-actors/hanrei/CLAUDE.md` (etzhayyim-era cross-actor link) is replaced by
+`orgs/etzhayyim/com-etzhayyim-hanrei/CLAUDE.md` (etzhayyim-era cross-actor link) is replaced by
 chigiri. chigiri is religious-corp native, Murakumo-only, SBT-gated,
 Charter Rider §2-compliant; no etzhayyim lineage.
 
@@ -51,7 +51,7 @@ Charter Rider §2-compliant; no etzhayyim lineage.
 
 All cells are path-reserved at R0; the cell modules are created in W1
 (post-Bootstrap-Council ratification) under
-`kotoba-lang/kotodama-cells/chigiri_*/` and will be import-time
+the pinned flat west sibling `orgs/kotoba-lang/kototama` and will be import-time
 `RuntimeError("chigiri R0 scaffold: activate via Council ADR + R1 ratification")` at scaffold time.
 
 | Cell | Murakumo node | Phase | I/O |
@@ -71,7 +71,7 @@ All cells are path-reserved at R0; the cell modules are created in W1
 
 ## 9 Lexicons under `com.etzhayyim.chigiri.*`
 
-See `/00-contracts/lexicons/com/etzhayyim/chigiri/README.md` for the
+See canonical actor-owned `lex/*.edn` for the
 canonical list + schemas.
 
 ## Constitutional Gates (G1–G14) — IMMUTABLE R0–R3
@@ -137,13 +137,12 @@ skeleton only — required-field validation lands at W1 ratification.
 
 ## Related Files
 
-- `/20-actors/chigiri/manifest.jsonld`
-- `/20-actors/chigiri/CLAUDE.md`
-- `/00-contracts/lexicons/com/etzhayyim/chigiri/` (9 Lexicons + README)
+- `manifest.edn`, `identity.edn`, and `dependencies.edn`
+- `lex/` canonical EDN contracts and `wire/` external JSON/JSON-LD
 - `/90-docs/adr/2605262700-chigiri-legal-procedure-tier-b-actor-r0.md`
 - `/90-docs/adr/2605262800-public-data-legal-corpus-ipfs-ingestion.md`
-- `/70-tools/baien-moemoekyun-train/recipes/legal/` (training corpus recipes)
-- `kotoba-lang/kotodama-py/src/kotodama/organism/sensors/legal/` (sensor stubs)
+- root training corpus checkout pinned by `dependencies.edn`
+- pinned `orgs/kotoba-lang/kototama` legal sensor sources
 - `/CHARTER-RIDER.md` §2 — 8 prohibited categories
 - `/COUNCIL.md` — Bootstrap Council roster + RFP
 - `/MEMBERS.md` — 信者 roster

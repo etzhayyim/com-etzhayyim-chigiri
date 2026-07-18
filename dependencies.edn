@@ -1,0 +1,18 @@
+{:dependencies
+ [{:dependency/id etzhayyim/root
+   :dependency/repository "https://github.com/etzhayyim/root"
+   :dependency/revision "ae6832f7ed09147a18b0416de18b44b00c95562a"
+   :dependency/paths ["90-docs/adr"
+                      "70-tools/scripts/lint/no-chigiri-legal-advice.mjs"
+                      "70-tools/baien-moemoekyun-train/recipes/legal"]}
+  {:dependency/id com.etzhayyim/bunken
+   :dependency/repository "https://github.com/etzhayyim/root"
+   :dependency/revision "ae6832f7ed09147a18b0416de18b44b00c95562a"
+   :dependency/paths ["20-actors/bunken"]}
+  {:dependency/id com.etzhayyim/hanrei :dependency/revision "b2d3ab0a011ea17e48cf566bf9bcaad02a6a989a"}
+  {:dependency/id com.etzhayyim/musubi :dependency/revision "36ddfde47d094d43db23edce166f688363f97332"}
+  {:dependency/id com.etzhayyim/shidemori :dependency/revision "e0ca1b15054efb34fdfa90646690c116697d865c"}
+  {:dependency/id org.kotoba-lang/kototama
+   :dependency/repository "https://github.com/kotoba-lang/kototama"
+   :dependency/revision "65899deed4fb9cfa3cdfed9d21130c91982d8cd3"
+   :dependency/west-path "orgs/kotoba-lang/kototama"}]}
